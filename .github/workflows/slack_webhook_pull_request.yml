@@ -22,7 +22,7 @@ jobs:
         with:
           payload: |
             {
-              "text": "GitHub Action build result: ${{ job.status }}\n${{ github.event.pull_request.html_url || github.event.head_commit.url }}",
+              "text": "${{ job.status }}! PR 올렸으니 comment 부탁드려요!\n${{ github.event.pull_request.html_url || github.event.head_commit.url }}",
               "attachments": [
                 {
                   "color": "#36a64f",
