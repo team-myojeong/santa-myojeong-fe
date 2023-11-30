@@ -23,7 +23,7 @@ jobs:
           payload: |
             {
               "text": "GitHub Action build result: ${{ job.status }}\n${{ github.event.pull_request.html_url || github.event.head_commit.url }}",
-              "blocks": [
+              "attachments": [
                 {
                   "color": "#36a64f",
                   "title": "${{ github.repository }}", 
