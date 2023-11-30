@@ -1,3 +1,5 @@
+import ShareLinkButton from "./ShareLinkButton";
+
 export default function sendQuestion() {
-	return <div>send question</div>;
+	return <ShareLinkButton />;
 }
