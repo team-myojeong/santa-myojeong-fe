@@ -7,9 +7,8 @@ export default function ShareLinkButton() {
 			try {
 				// Web Share API 사용
 				await navigator.share({
-					title: "묘정",
-					text: "묘정송편",
-					url: "https://www.myojeong.com/",
+					title: "myojeong santa",
+					url: process.env.NEXT_PUBLIC_FRONT_URL,
 				});
 			} catch (error) {
 				console.log("error:", error);
@@ -17,7 +16,7 @@ export default function ShareLinkButton() {
 		} else {
 			// Web Share API 지원 안될 경우 clipboard API 사용
 			try {
-				await navigator.clipboard.writeText("https://www.myojeong.com/");
+				await navigator.clipboard.writeText(process.env.NEXT_PUBLIC_FRONT_URL!);
 				alert("복사 완료");
 			} catch (error) {
 				console.log("error:", error);
